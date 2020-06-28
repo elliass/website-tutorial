@@ -37,3 +37,107 @@
     }
   }
 }
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: $background-opacity;
+
+  &.show {
+    visibility: visible;
+  }
+
+  // Set Branding and Nav blocks side by side
+  &-branding,
+  &-nav {
+    display: flex; // Set li items side by side
+    flex-flow: column wrap; // Set li items back up and down
+    align-items: center;
+    justify-content: center;
+    float: left; // Set blocks side by side
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  // Style Nav block
+  &-nav {
+    background: darken($primary-color, 5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    // Slide in from top
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Style Branding block
+  &-branding {
+    background: $primary-color;
+    margin: 0;
+    padding: 0;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    // Slide in from bottom
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    // Add & style profile image
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: #fff;
+      border-radius: 50%;
+      border: solid 4px $secondary-color;
+    }
+  }
+
+  // Style nav item
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    // Slide in from right
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current {
+      a {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // Style nav links
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    padding: 1rem 0;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Add delay for nav item
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
