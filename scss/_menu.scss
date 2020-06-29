@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -65,7 +65,7 @@
 
   // Style Nav block
   &-nav {
-    background: darken($primary-color, 5);
+    background: darken($secondary-color, 5);
     margin: 0;
     padding: 0;
     list-style: none;
@@ -99,6 +99,12 @@
       border-radius: 50%;
       border: solid 4px $secondary-color;
     }
+
+    .description {
+      margin-top: 20px;
+      font-size: 30px;
+      visibility: hidden;
+    }
   }
 
   // Style nav item
@@ -113,7 +119,7 @@
 
     &.current {
       a {
-        color: $secondary-color;
+        color: $primary-color;
       }
     }
   }
@@ -125,12 +131,12 @@
     padding: 1rem 0;
     font-size: 30px;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-transform: uppercase;
     @include easeOut;
 
     &:hover {
-      color: $secondary-color;
+      color: $primary-color;
     }
   }
 }

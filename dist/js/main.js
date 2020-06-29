@@ -1,9 +1,12 @@
+/*** Display Menu ***/
+
 // Select DOM elements related to Menu
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuBranding = document.querySelector(".menu-branding");
 const menuNav = document.querySelector(".menu-nav");
 const navItems = document.querySelectorAll(".nav-item");
+const home = document.querySelector("#home");
 
 // Set initial state of Menu
 let showMenu = false;
@@ -20,6 +23,7 @@ function toggleMenu() {
     menuBranding.classList.add("show");
     menuNav.classList.add("show");
     navItems.forEach((item) => item.classList.add("show"));
+    home.classList.add("close");
 
     // Reset actual state of Menu
     showMenu = true;
@@ -29,6 +33,7 @@ function toggleMenu() {
     menuBranding.classList.remove("show");
     menuNav.classList.remove("show");
     navItems.forEach((item) => item.classList.remove("show"));
+    home.classList.remove("close");
 
     // Reset actual state of Menu
     showMenu = false;
