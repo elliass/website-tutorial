@@ -79,6 +79,7 @@ main {
   }
 }
 
+// About
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -117,6 +118,77 @@ main {
     border-bottom: solid $secondary-color 3px;
     border-radius: 1%;
   }
+}
+
+// Portfolio
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  img {
+    width: 100%;
+    border: solid 2px #fff;
+    @include easeOut;
+
+    &:hover {
+      border-color: $secondary-color;
+      opacity: 0.7;
+    }
+  }
+}
+
+// Contact
+.boxes {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  padding: 1rem 1rem;
+  align-items: center;
+
+  div {
+    border-bottom: solid 2px #fff;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    @include easeOut;
+
+    &:hover {
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+
+      span {
+        color: set-text-color($secondary-color);
+      }
+
+      a {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Button styles
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.5rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  background: #fff;
+  color: #444;
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 5);
 }
 
 #main-footer {
