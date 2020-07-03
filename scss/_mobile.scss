@@ -74,8 +74,7 @@
       "bio-image"
       "bio"
       "job-1"
-      "job-2"
-      "job-3";
+      "job-2";
 
     grid-template-columns: 1fr;
   }
@@ -87,6 +86,10 @@
 
 // Smartphones
 @include mediaSm {
+  .badges {
+    grid-template-columns: 1fr;
+  }
+
   .projects {
     grid-template-columns: 1fr;
   }

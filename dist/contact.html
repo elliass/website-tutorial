@@ -52,7 +52,7 @@
 
     <main id="contact" class="main-bg">
       <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
-      <h2 class="sm-heading">How can you reach me...</h2>
+      <h2 class="sm-heading">You can reach me or leave a message...</h2>
 
       <div class="boxes">
         <div>
@@ -68,6 +68,47 @@
           >
         </div>
       </div>
+
+      <form action="POST" data-netlify="true">
+        <div class="fields">
+          <div class="field field-1">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="area"
+              placeholder="Name"
+            />
+          </div>
+          <div class="field field-2">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="area"
+              placeholder="Email"
+            />
+          </div>
+          <div class="field field-3">
+            <textarea
+              type="message"
+              name="message"
+              id="message"
+              class="area"
+              placeholder="Message"
+              rows="15"
+            ></textarea>
+          </div>
+          <div>
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <input type="submit" value="Send Message" class="btn-light" />
+          </li>
+        </ul>
+      </form>
     </main>
 
     <footer id="main-footer">Copyright &copy; 2020</footer>
