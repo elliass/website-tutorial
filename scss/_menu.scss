@@ -45,6 +45,8 @@
   width: 100%;
   visibility: hidden;
   opacity: $background-opacity;
+  // display: flex;
+  // flex-wrap: wrap;
 
   &.show {
     visibility: visible;
@@ -53,11 +55,11 @@
   // Set Branding and Nav blocks side by side
   &-branding,
   &-nav {
-    display: flex; // Set li items side by side
-    flex-flow: column wrap; // Set li items back up and down
+    display: flex;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left; // Set blocks side by side
+    float: left;
     width: 50%;
     height: 100vh;
     overflow: hidden;
@@ -65,12 +67,18 @@
 
   // Style Nav block
   &-nav {
-    background: darken($secondary-color, 5);
+    background: $secondary-color;
+    opacity: 0.9;
     margin: 0;
     padding: 0;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
+    // flex: 1;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // padding-left: 3rem;
 
     // Slide in from top
     &.show {
@@ -80,6 +88,7 @@
 
   // Style Branding block
   &-branding {
+    // flex: 2;
     background: $primary-color;
     margin: 0;
     padding: 0;
@@ -92,13 +101,13 @@
     }
 
     // Add & style profile image
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url(../img/portrait.jpg);
-      border-radius: 50%;
-      border: solid 4px $secondary-color;
-    }
+    // .portrait {
+    //   width: 250px;
+    //   height: 250px;
+    //   background: url(../img/portrait.jpg);
+    //   border-radius: 50%;
+    //   border: solid 4px $secondary-color;
+    // }
 
     .description {
       margin-top: 20px;
