@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9df998c195.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+          <div class="description">Elliass Rachidi</div>
+        </div>
+
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="portfolio.html" class="nav-link">
+              Portfolio
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="contact.html" class="nav-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contact" class="main-bg">
+      <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
+      <h2 class="sm-heading">You can reach me or leave a message...</h2>
+
+      <div class="boxes">
+        <div>
+          <span class="text-secondary">Email:</span> rachidi.elliass@gmail.com
+        </div>
+        <div>
+          <span class="text-secondary">Phone:</span> (+32) 0483 38 77 62
+        </div>
+        <div>
+          <span class="text-secondary">Linkedin:</span>
+          <a href="https://www.linkedin.com/in/elliass-rachidi/"
+            >/elliass-rachidi</a
+          >
+        </div>
+      </div>
+
+      <form action="POST" data-netlify="true">
+        <div class="fields">
+          <div class="field field-1">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="area"
+              placeholder="Name"
+            />
+          </div>
+          <div class="field field-2">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="area"
+              placeholder="Email"
+            />
+          </div>
+          <div class="field field-3">
+            <textarea
+              type="message"
+              name="message"
+              id="message"
+              class="area"
+              placeholder="Message"
+              rows="15"
+            ></textarea>
+          </div>
+          <div>
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <input type="submit" value="Send Message" class="btn-light" />
+          </li>
+        </ul>
+      </form>
+    </main>
+
+    <footer id="main-footer">Copyright &copy; 2020</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
